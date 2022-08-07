@@ -1,2 +1,2 @@
-# one-t3-challenges
+# One Challenges - Class 3
 Resolution of ONE challenges - Class 3
