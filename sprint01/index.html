@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <title>Cryptic - Alura</title>
+</head>
+
+<body>
+    <header>
+        <h1><img src="./assets/img/logo.png" alt="Logo da Alura"></h1>
+    </header>
+
+    <main>
+        <form>
+            <label for="input-content">Digite seu texto</label>
+            <textarea id="input-content" placeholder="Digite seu texto" autofocus required></textarea>
+        </form>
+
+        <div class="informations">
+            <img src="./assets/img/exclamation.png" alt="Imagem de exclamação">
+            <p>Apenas letras minúsculas e sem acento.</p>
+        </div>
+
+        <div class="commands">
+            <button class="btn-encrypt">Criptografar</button>
+            <button class="btn-decrypt">Descriptografar</button>
+        </div>
+    </main>
+
+    <footer>
+        <small>&copy; 2022 - Desenvolvido por Wesley Paulo Gonçalves</small>
+    </footer>
+
+    <section>
+        <div class="output">
+            <img src="./assets/img/no_messages_found.png">
+
+            <div class="output-messages">
+                <p>Nenhuma mensagem encontrada</p>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+</body>
+
+</html>
