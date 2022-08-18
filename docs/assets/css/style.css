@@ -1,0 +1,288 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Inter', sans-serif;
+	font-size: 16px;
+}
+
+/* Body section */
+body {
+	display: grid;
+	grid-template-areas: "header section"
+		"main section"
+		"footer section";
+	grid-template-columns: 70% 30%;
+	grid-template-rows: auto 1fr auto;
+	height: 100vh;
+	background: #F3F5FC;
+	/* background: linear-gradient(135deg, #4671ea, #ac34e7); */
+}
+
+body>header {
+	grid-area: header;
+}
+
+body>main {
+	grid-area: main;
+}
+
+body>footer {
+	grid-area: footer;
+}
+
+body>section {
+	grid-area: section;
+}
+
+/* Header section */
+header h1 {
+	margin: 2.5rem 0 0 5.25rem;
+	font-size: 3rem;
+	font-weight: 300;
+	color: #0A3871;
+}
+
+header h1 img {
+	margin-right: 1rem;
+}
+
+/* Main section */
+main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+main form {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding: 5rem 5rem 1rem 15rem;
+}
+
+main form label {
+	display: none;
+}
+
+main form textarea,
+section .output-found textarea {
+	display: flex;
+	flex-grow: 1;
+	color: #0A3871;
+	background: inherit;
+	width: 100%;
+	resize: none;
+	outline: none;
+	overflow-x: hidden;
+	border: none;
+	text-align: justify;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 150%;
+}
+
+main form textarea::placeholder {
+	color: #0A3871;
+}
+
+main .informations {
+	display: flex;
+	flex-grow: 0;
+	gap: 0.5rem;
+	align-items: center;
+	padding: 0 5rem 0 15rem;
+	color: #495057;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 0.75rem;
+	line-height: 150%;
+	opacity: 0.8;
+}
+
+main .commands {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 0;
+	gap: 1.5rem;
+	padding: 1rem 5rem 2rem 15rem;
+}
+
+main .commands button,
+section .output-found button {
+	padding: 1.5rem;
+	border-radius: 1.5rem;
+	border: 0.063rem solid #0A3871;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.188rem;
+	text-align: center;
+	width: 100%;
+	transition: transform 0.2s ease-in-out;
+}
+
+main .commands button:hover,
+main .commands button:focus,
+section .output-found button:hover,
+section .output-found button:focus {
+	transform: scale(1.07);
+	border: 0.125rem solid #000;
+}
+
+main .commands .btn-encrypt {
+	background: #0A3871;
+	color: #ffffff;
+	order: 0;
+}
+
+main .commands .btn-decrypt,
+section .output-found button {
+	background: #d8dfe8;
+	color: #0a3871;
+	order: 1;
+}
+
+/* Output section */
+section {
+	padding: 2.5rem 2.5rem 2.5rem 0;
+}
+
+section .output-empty {
+	display: flex;
+}
+
+section .output-found {
+	display: none;
+	gap: 2.5rem;
+}
+
+section .output-empty,
+section .output-found {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	padding: 2rem;
+	border-radius: 2rem;
+	box-shadow: 0 1.5rem 2rem -0.5rem rgba(0, 0, 0, 0.2);
+}
+
+section .output-empty img {
+	width: 100%;
+}
+
+section .output-messages {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	text-align: center;
+	font-style: normal;
+	margin-top: 2rem;
+}
+
+section .output-messages p {
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 150%;
+	color: #495057;
+}
+
+section .output-messages p:first-child {
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 120%;
+	color: #343A40;
+}
+
+/* Footer section */
+footer {
+	padding: 0.125rem 0.375rem;
+}
+
+footer small {
+	color: #0A3871;
+}
+
+/* Responsiveness section */
+@media only screen and (max-width: 768px) {
+	html {
+		font-size: 14px;
+	}
+
+	/* Body section */
+	body {
+		grid-template-areas: "header"
+			"main"
+			"section"
+			"footer";
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr auto auto;
+	}
+
+	/* Header section */
+	header h1 {
+		margin: 4.75rem 0 0 2.5rem;
+	}
+
+	/* Main section */
+	main form {
+		padding: 7.5rem 2.5rem 1rem 2.5rem;
+	}
+
+	main .informations {
+		padding: 0 2.5rem 0 2.5rem;
+	}
+
+	main .commands {
+		padding: 1rem 2.5rem 2rem 2.5rem;
+	}
+
+	/* Footer section */
+	footer {
+		text-align: center;
+	}
+
+	/* Output section */
+	section {
+		padding: 0 2.5rem 2.5rem 2.5rem;
+	}
+
+	section .output img {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	html {
+		font-size: 12px;
+	}
+
+	/* Header section */
+	header h1 {
+		margin: 1.5rem 0 0 1rem;
+	}
+
+	/* Main section */
+	main form {
+		padding: 5rem 2.5rem 1rem 2.5rem;
+	}
+
+	main .commands {
+		display: flex;
+		flex-direction: column;
+	}
+}

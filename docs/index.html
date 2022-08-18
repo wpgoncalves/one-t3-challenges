@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <title>Cryptic - ONE</title>
+</head>
+
+<body>
+    <header>
+        <h1><img src="./assets/img/logo.png" alt="Logo da Alura">Cryptic - ONE</h1>
+    </header>
+
+    <main>
+        <form>
+            <label for="input-content">Digite seu texto</label>
+            <textarea id="input-content" rows="5" placeholder="Digite seu texto" autofocus></textarea>
+        </form>
+
+        <div class="informations">
+            <img src="./assets/img/exclamation.png" alt="Imagem de exclamação">
+            <p>Apenas letras sem acento.</p>
+        </div>
+
+        <div class="commands">
+            <button class="btn-encrypt">&#128274; Criptografar</button>
+            <button class="btn-decrypt">&#128275; Descriptografar</button>
+        </div>
+    </main>
+
+    <footer>
+        <small>&copy; 2022 - Desenvolvido por Wesley Paulo Gonçalves</small>
+    </footer>
+
+    <section>
+        <div class="output-empty">
+            <img src="./assets/img/no_messages_found.png">
+
+            <div class="output-messages">
+                <p>Nenhuma mensagem encontrada</p>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+        </div>
+
+        <div class="output-found">
+            <textarea id="output-content" disabled></textarea>
+            <button class="btn-copy">&#128466; Copiar</button>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+</body>
+
+</html>
